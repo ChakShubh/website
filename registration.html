@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        .body{
+            background-color: aqua;
+        }
+
+        .container{
+        padding: 30px;
+        background-color: darkkhaki; 
+        border-radius: 10px; 
+        }
+
+        input[type=text], input[type=email], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+
+        input[type=radio] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 50px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: #45a049;
+        }
+
+        div {
+        background-color: #f2f2f2;
+        padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    <h1> <center> Registration Form </center></h1>
+    <form name="Registration Form" method="POST" action="registration.php"> 
+        Name<input type="text" placeholder="Enter your Name: " required><br>
+        Gender<br>
+        <input type = "radio" name = "gender" id = "male" value = "Male"/>  
+        <label for = "male">Male</label>  
+        <input type = "radio" name = "gender" id = "Female" value = "Female"/>  
+        <label for = "Female">female</label>  
+        <br>
+        Email ID: <input type="email" value="" placeholder="Enter your Email ID:" required><br>
+        Enter your Location:
+        <select name="Location" id="location">  
+            <option value="Pune"> Pune </option>  
+            <option value="Mumbai"> Mumbai </option>  
+            <option value="Chennai"> Chennai </option>  
+            <option value="Kolkata"> Kolkata </option>  
+            <option value="New Delhi"> New Delhi </option>  
+        </select
+        <br>
+        <label>Software Knowledge</label>
+        <ul style="list-style-type:none;">
+            <li><input type="checkbox" name="language" value="Artificial Intelligence"/> Artificial Intelligence </li>
+            <li><input type="checkbox" name="language" value="Web Development" /> Web Development </li>
+            <li><input type="checkbox" name="language" value="Cloud Computing" /> Cloud Computing </li>
+          </ul>
+
+        Enter your Remarks:<br>  
+        <textarea rows="5" cols="168" placeholder="Enter your Remarks"></textarea>  
+
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+</body>
+</html>
