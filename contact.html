@@ -11,7 +11,15 @@
 
         .left{
             color: blueviolet;
-            width: auto;
+            width: 45%;
+            background: lightcoral;
+            animation:myfirst 2s infinite;
+        }
+
+        @keyframes myfirst
+        {
+            from {background-color:lightgreen;}
+            to {background:lightcyan;}
         }
 
         .container{
@@ -76,7 +84,7 @@
                 Email ID: <input type="email" value="" placeholder="Enter your Email ID:" required><br>
                 Enter your Address: <input type="text" placeholder="Enter your Address: " required><br>
                 <br>
-                Enter your Remarks:<br> <textarea rows="5" cols="90" placeholder="Enter your Remarks"></textarea>  
+                Enter your Remarks:<br> <textarea rows="5" cols="73" placeholder="Enter your Remarks"></textarea>  
                 <input type="submit" value="Submit">
             </form>
         </div>
