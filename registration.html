@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,41 +54,179 @@
         padding: 20px;
         }
     </style>
+
+    <script>
+        function myfunc1(){
+            name = f1.name.value;
+            gender = f1.gender.value;
+            course = f1.course.value;
+            email = f1.email.value;
+            requirements = f1.requirements.value;
+            flag=0;
+            // check if the name is empty
+            if(name == ""){
+                alert("Enter name first");
+            }
+            // check if the email is empty
+            else if(email == ""){
+                alert("Enter your Email ID");
+            }
+            else{
+                alert("Name: "+name+"\nGender: "+gender+"\nEmail ID: "+email+"\n Courses Required: "+course+"\nOther Requirements: "+requirements);
+                flag = 1;
+            }
+            if(flag==1){
+                window.open("./thankyou.html");
+            }
+        }
+    </script>
 </head>
 
 <body>
     <div class="container">
     <h1> <center> Registration Form </center></h1>
-    <form name="Registration Form" method="POST" action="registration.php"> 
-        Name<input type="text" placeholder="Enter your Name: " required><br>
-        Gender<br>
-        <input type = "radio" name = "gender" id = "male" value = "Male"/>  
-        <label for = "male">Male</label>  
-        <input type = "radio" name = "gender" id = "Female" value = "Female"/>  
-        <label for = "Female">female</label>  
-        <br>
-        Email ID: <input type="email" value="" placeholder="Enter your Email ID:" required><br>
-        Enter your Location:
-        <select name="Location" id="location">  
-            <option value="Pune"> Pune </option>  
-            <option value="Mumbai"> Mumbai </option>  
-            <option value="Chennai"> Chennai </option>  
-            <option value="Kolkata"> Kolkata </option>  
-            <option value="New Delhi"> New Delhi </option>  
-        </select
-        <br>
-        <label>Software Knowledge</label>
-        <ul style="list-style-type:none;">
-            <li><input type="checkbox" name="language" value="Artificial Intelligence"/> Artificial Intelligence </li>
-            <li><input type="checkbox" name="language" value="Web Development" /> Web Development </li>
-            <li><input type="checkbox" name="language" value="Cloud Computing" /> Cloud Computing </li>
-          </ul>
-
-        Enter your Remarks:<br>  
-        <textarea rows="5" cols="168" placeholder="Enter your Remarks"></textarea>  
-
-        <input type="submit" value="Submit">
+    <form name="f1" onsubmit="myfunc1()" action="">
+        Name: <input type="text" name="name"><br><br><br>
+        Gender:
+        <input type="radio" name="gender" value="0"> Male </input>
+        <input type="radio" name="gender" value="1"> Female </input>
+        <br><br><br>
+        Email ID: <input type="text" name="email"><br><br><br>
+        Select a Course: <select name="course" id="course" onchange="myfunc1()">
+            <option name="course"> Choose Some Course </option><br>
+            <option value="a" name="course"> PHP </option><br>
+            <option value="b" name="course"> Artificial Intelligence </option><br>
+            <option value="c" name="course"> Machine Learning </option><br>
+            <option value="d" name="course"> Internet of Things </option><br>
+            <option value="e" name="course"> Cloud Computing </option><br>
+        </select>
+        <br><br><br>
+        Other Requirements: <textarea rows="5" cols="50" name="requirements"></textarea><br><br><br><br>
+        <input type="submit" name="submit"> 
     </form>
+    </div>
+    <script>
+        function myfunc1(){
+            name = frm1.name.value;
+            gender = frm1.gender.value;
+            email = frm1.email.value;
+            location = frm1.location.value;
+            languaage = frm1.languaage.value;
+            alert(languaage);
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        .body{
+            background-color: aqua;
+        }
+
+        .container{
+        padding: 30px;
+        background-color: darkkhaki; 
+        border-radius: 10px; 
+        }
+
+        input[type=text], input[type=email], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+
+        input[type=radio] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 50px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color: #45a049;
+        }
+
+        div {
+        background-color: #f2f2f2;
+        padding: 20px;
+        }
+    </style>
+
+    <script>
+        function myfunc1(){
+            name = f1.name.value;
+            gender = f1.gender.value;
+            course = f1.course.value;
+            email = f1.email.value;
+            requirements = f1.requirements.value;
+            flag=0;
+            // check if the name is empty
+            if(name == ""){
+                alert("Enter name first");
+            }
+            // check if the email is empty
+            else if(email == ""){
+                alert("Enter your Email ID");
+            }
+            else{
+                alert("Name: "+name+"\nGender: "+gender+"\nEmail ID: "+email+"\n Courses Required: "+course+"\nOther Requirements: "+requirements);
+                flag = 1;
+            }
+            if(flag==1){
+                window.open("./thankyou.html");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1> <center> Registration Form </center></h1>
+        <form name="f1" onsubmit="myfunc1()" action="">
+            Name: <input type="text" name="name"><br><br><br>
+            Gender:
+            <input type="radio" name="gender" value="0"> Male </input>
+            <input type="radio" name="gender" value="1"> Female </input>
+            <br><br><br>
+            Email ID: <input type="text" name="email"><br><br><br>
+            Select a Course: <select name="course" id="course">
+                <option name="course"> Choose Some Course </option><br>
+                <option value="PHP" name="course"> PHP </option><br>
+                <option value="Artificial Intelligence" name="course"> Artificial Intelligence </option><br>
+                <option value="Machine Learning" name="course"> Machine Learning </option><br>
+                <option value="Internet of Things" name="course"> Internet of Things </option><br>
+                <option value="Cloud Computing" name="course"> Cloud Computing </option><br>
+            </select>
+            <br><br><br>
+            Other Requirements: <textarea rows="5" cols="50" name="requirements"></textarea><br><br><br><br>
+            <input type="submit" name="submit"> 
+        </form>
     </div>
 </body>
 </html>
