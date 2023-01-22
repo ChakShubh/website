@@ -10,8 +10,7 @@
             filter: contrast(20);
             filter: sepia(.65);
             filter: drop-shadow(12px 12px 10px);  
-            padding-right: 20%;
-            padding-left: 45%;
+            padding-right: 90%;
         }
 
         .three {
@@ -19,8 +18,7 @@
             filter: contrast(20);
             filter: sepia(.65);
             filter: drop-shadow(12px 12px 10px);  
-            padding-right: 20%;
-            padding-left: 45%;
+            padding-right: 90%;
         }
 
         .four {
@@ -28,13 +26,14 @@
             filter: contrast(20);
             filter: sepia(.65);
             filter: drop-shadow(12px 12px 10px);
-            padding-left: 45%;
+            padding-right: 90%;
         }
 
         .t1{
             border: 1px;
-            border-color: aquamarine;
+            border-color: rgb(11, 11, 11);
             transition: transform .2s; /* Animation */
+            padding-left: 10%;
         }
 
         .two:hover{
@@ -48,33 +47,37 @@
         .four:hover {
             transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
         }
-        </style>
-    </style>
 
+        td{
+        padding: 0 28px;
+        }
+    </style>
 </head>
 
-<body></body>
-    <div class="zoom">
-    <table class="t1">
-        <tr>
-           <td><img class='two' src="./images/pic1.jpeg" width="350" height="350"></td>
-           <td><img class='three' src="./images/pic2.jpg" width="350" height="350"></td>
-           <td><img class='four' src="./images/pic3.jpg" width="350" height="350"></td>
-        </tr>
-        
-        <tr>
-           <td><img class='two' src="./images/pic4.jpg" width="350" height="350"></td>
-           <td><img class='three' src="./images/pic5.jpg" width="350" height="350"></td>
-           <td><img class='four' src="./images/pic6.jpg" width="350" height="350"></td>
-        </tr>
-
-        <tr>
-            <td><img class='two' src="./images/pic4.jpg" width="350" height="350"></td>
-            <td><img class='three' src="./images/pic5.jpg" width="350" height="350"></td>
-            <td><img class='four' src="./images/pic6.jpg" width="350" height="350"></td>
-         </tr>
-     </table>
+<body style="background-color:cornflowerblue;">
+    <div>
+        <h1><center> Photo Gallery - Virtual Classes !!! </center></h1>
+        <table class="t1">
+            <tr>
+            <td><img class='two' src="./images/download1.jpeg" width="300" height="300"></td>&nbsp;
+            <td><img class='three' src="./images/download2.jpeg" width="300" height="300"></td>&nbsp;
+            <td><img class='four' src="./images/download3.jpeg" width="300" height="300"></td>&nbsp;
+            </tr>
+            <br><br>
+            <tr>
+            <td><img class='two' src="./images/download4.jpeg" width="300" height="300"></td>&nbsp;
+            <td><img class='three' src="./images/download5.png" width="300" height="300"></td>&nbsp;
+            <td><img class='four' src="./images/download6.jpeg" width="300" height="300"></td>&nbsp;
+            </tr>
+            <br><br>
+            <tr>
+                <td><img class='two' src="./images/download7.png" width="300" height="300"></td>&nbsp;
+                <td><img class='three' src="./images/download8.png" width="300" height="300"></td>&nbsp;
+                <td><img class='four' src="./images/download9.png" width="300" height="300"></td>&nbsp;
+            </tr>
+        </table>
      </div>
+     <br><br><br><br>
 
 </body>
 </html>
