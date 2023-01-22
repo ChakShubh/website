@@ -2,18 +2,21 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Contact Us</title>
+
     <style>
         .right{
-            height: 70%;
-            width: auto;
+            width: 30%;
+            padding-top: 2%;
+            padding-right: 8%;
         }
 
         .left{
             color: blueviolet;
-            width: 45%;
-            background: lightcoral;
-            animation:myfirst 2s infinite;
+            width: 40%;
+            animation: myfirst 3s infinite;
+            padding: 3%;
         }
 
         @keyframes myfirst
@@ -25,33 +28,31 @@
         .container{
             display: flex;
             justify-content: space-around;
-            padding: 30px;
-            background-color: darkkhaki; 
-            border-radius: 10px; 
+            background-color:aqua; 
         }
 
-        .body{
-            background-color: aqua;
+        @keyframes myfirst
+        {
+            from {background-color:lightgreen;}
+            to {background-color: lightgray;}
         }
 
-        input[type=text], input[type=email], select {
+        .head1{
+            width: 100%;
+            text-align: center;
+            background-color:aqua;
+        }
+
+        input[type=text], input[type=email], textarea {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
             display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
             box-sizing: border-box;
-        }
-
-        input[type=radio] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 14px 50px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
         }
 
         input[type=submit] {
@@ -59,39 +60,61 @@
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
             cursor: pointer;
         }
 
         input[type=submit]:hover {
-            background-color: #45a049;
+            background-color: lightcoral;
         }
 
-        div {
-            background-color: #f2f2f2;
-            padding: 20px;
+        body{
+        width: 100%;
+        font-family: fantasy;
+        }
+
+        @media screen and (max-width: 450px) {
+            body {
+                width: 100%;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color:cornflowerblue;
+            }   
         }
     </style>
 </head>
+
 <body>
-    <h3>Contact Us</h3>
+    <div class="head1">
+        <h1>Contact Us</h1>
+        <h2>Want to reach us? We'd love to hear from you .....</h2>
+        Let's meet on a cup of coffee .....
+        <br><br><br>
+    </div class=head1>
+
     <div class="container">
         <div class="left">
-            <form name="Contact Us" method="POST" action="contact.php"> 
-                Name: <input type="text" placeholder="Enter your Name: " required><br>
-                Email ID: <input type="email" value="" placeholder="Enter your Email ID:" required><br>
-                Enter your Address: <input type="text" placeholder="Enter your Address: " required><br>
-                <br>
-                Enter your Remarks:<br> <textarea rows="5" cols="73" placeholder="Enter your Remarks"></textarea>  
+            <form name="Contact Us" method="POST" action="contact.php">
+
+                Name: <input type="text" placeholder="Enter your Name: " required><br><br>
+
+                Email ID: <input type="email" value="" placeholder="Enter your Email ID:" required><br><br>
+
+                Enter your Address: <input type="text" placeholder="Enter your Address: " required><br><br>
+                
+                Enter your Remarks:<br> <textarea rows="5" placeholder="Enter your Remarks"></textarea>  
+                <br><br>
+
                 <input type="submit" value="Submit">
             </form>
         </div>
 
         <div class="right">
+            <pre>
+                <h3>    Address: Bajaj Finserv Direct Limited, Kalyani Nagar, Pune </h3>
+            </pre>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.326941369978!2d73.90947250808591!3d18.54453668979014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c10d6cc6af5d%3A0x8f204cff2b9bd597!2sCEREBRUM%20IT%20PARK%2C%20Marigold%20complex%2C%20Kalyani%20Nagar%2C%20Pune%2C%20Maharashtra%20411014!5e0!3m2!1sen!2sin!4v1674018830440!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <br><br>
     </div>
+    <br><br>
 </body>
 </html>
