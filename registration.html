@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-
     <style>
         .body{
             background-color: aqua;
@@ -85,26 +84,187 @@
 
 <body>
     <div class="container">
-        <h1> <center> Registration Form </center></h1>
+    <h1> <center> Registration Form </center></h1>
+    <form name="f1" onsubmit="myfunc1()" action="">
+        Name: <input type="text" name="name"><br><br><br>
+        Gender:
+        <input type="radio" name="gender" value="0"> Male </input>
+        <input type="radio" name="gender" value="1"> Female </input>
+        <br><br><br>
+        Email ID: <input type="text" name="email"><br><br><br>
+        Select a Course: <select name="course" id="course" onchange="myfunc1()">
+            <option name="course"> Choose Some Course </option><br>
+            <option value="a" name="course"> PHP </option><br>
+            <option value="b" name="course"> Artificial Intelligence </option><br>
+            <option value="c" name="course"> Machine Learning </option><br>
+            <option value="d" name="course"> Internet of Things </option><br>
+            <option value="e" name="course"> Cloud Computing </option><br>
+        </select>
+        <br><br><br>
+        Other Requirements: <textarea rows="5" cols="50" name="requirements"></textarea><br><br><br><br>
+        <input type="submit" name="submit"> 
+    </form>
+    </div>
+    <script>
+        function myfunc1(){
+            name = frm1.name.value;
+            gender = frm1.gender.value;
+            email = frm1.email.value;
+            location = frm1.location.value;
+            languaage = frm1.languaage.value;
+            alert(languaage);
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        body{
+        padding-left: 18%;
+        padding-right: 18%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-family:'Courier New', Courier, monospace;
+        background-image:url(./images/bg-image2.jpeg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+
+        .container{
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 10px; 
+        animation: myfirst 3s infinite;
+        }
+
+        @keyframes myfirst
+        {
+        from {background-color:lightgreen;}
+        to {background-color:lightskyblue;}
+        }
+
+        input[type=text], input[type=email], select, .t1 {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        box-sizing: border-box;
+        }
+
+        input[type=radio] {
+        padding: 14px 50px;
+        margin: 8px 0;
+        cursor: pointer;
+        }
+
+        input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color:coral;
+        }
+
+        @media screen and (max-width: 450px) {
+        body {
+        width: 100%;
+        font-family: fantasy;
+        }
+        }
+    </style>
+
+    <script>
+        function myfunc1(){
+            name = f1.name.value;
+            gender = f1.gender.value;
+            course = f1.course.value;
+            email = f1.email.value;
+            requirements = f1.requirements.value;
+            flag=0;
+
+            // check if the name is empty
+            if(name == ""){
+                alert("Kindly enter your Name");
+            }
+
+            //check if the gender is empty
+            else if(gender == ""){
+                alert("Kindly choose your Gender");
+            }
+
+            // check if the course is empty
+            else if(course == ""){
+                alert("Kindly choose your Course");
+            }
+
+            // check if the email is empty
+            else if(email == ""){
+                alert("Kindly enter your Email ID");
+            }
+
+            //display the data entered by the User for final confirmation
+            else{
+                alert("Name: "+name+"\nGender: "+gender+"\nEmail ID: "+email+"\n Courses Required: "+course+"\nOther Requirements: "+requirements);
+                flag = 1;
+            }
+            if(flag==1){
+                window.open("./thankyou.html");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-shadow: 2px 3px 5px blueviolet;"> <center> Registration Form </center></h1>
         <form name="f1" onsubmit="myfunc1()" action="">
-            Name: <input type="text" name="name"><br><br><br>
-            Gender:
-            <input type="radio" name="gender" value="0"> Male </input>
+            Name: <br><input type="text" name="name" placeholder="Enter your Name: "><br><br><br>
+
+            Gender: <br>
+            <input type="radio" name="gender" value="0"> Male </input><br>
             <input type="radio" name="gender" value="1"> Female </input>
             <br><br><br>
-            Email ID: <input type="text" name="email"><br><br><br>
-            Select a Course: <select name="course" id="course">
-                <option name="course"> Choose Some Course </option><br>
-                <option value="PHP" name="course"> PHP </option><br>
+
+            Email ID: <br><input type="text" name="email" placeholder="Enter your Email ID: "><br><br><br>
+
+            Select a Course: <br><select name="course" id="course">
+                <option name="course"> Choose Some Course </option><br>                
                 <option value="Artificial Intelligence" name="course"> Artificial Intelligence </option><br>
-                <option value="Machine Learning" name="course"> Machine Learning </option><br>
+                <option value="Data Analytics" name="course"> Data Analytics </option><br>
+                <option value="Web Development" name="course"> Web Development </option><br>
                 <option value="Internet of Things" name="course"> Internet of Things </option><br>
                 <option value="Cloud Computing" name="course"> Cloud Computing </option><br>
             </select>
             <br><br><br>
-            Other Requirements: <textarea rows="5" cols="50" name="requirements"></textarea><br><br><br><br>
+
+            Other Requirements: <br><textarea class="t1" rows="5" name="requirements" placeholder="Any other Requirements ... "></textarea>
+            
+            <br><br><br><br>
             <input type="submit" name="submit"> 
+            <br>
         </form>
     </div>
+    <br><br>
 </body>
 </html>
