@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <script>
+        function fun1(){
+            flag = 0;
+            count = 0
+            crt1 = f1.q1.value;            
+            if(crt1 == "0"){
+                count = count + 2
+            }
+
+            crt2 = f1.q2.value;
+            if(crt2 == "0"){
+                count = count + 2
+            }
+            alert("You score is: "+count);
+            // text = "Thank You Attending the Test";
+            // document.getElementById("demo").innerHTML = text;
+            window.open("./index.html");
+        }
+    </script>
+
+</head>
+    <body>
+
+        <h1><center>Quiz</center></h1>
+        <form name="f1" method="POST">
+            <pre>
+                Q1) JS is used for:
+                    <input type="radio" name="q1" value="0"> Used for creating Dynamic Web Pages </input>
+                    <input type="radio" name="q1" value="1"> Used for creating Static Web Pages </input>
+                    <input type="radio" name="q1" value="1"> All </input>
+                    <input type="radio" name="q1" value="1"> None of the above </input>
+
+                Q2) Node JS is used for:
+                    <input type="radio" name="q2" value="1"> Used for creating Client Side Applications </input>
+                    <input type="radio" name="q2" value="0"> Used for creating Server Side Applications </input>
+                    <input type="radio" name="q2" value="1"> All </input>
+                    <input type="radio" name="q2" value="1"> None of the above </input>
+
+                    <br><br><br><br>
+                    <!-- <h3 name="ans" value=""></h3> -->
+                <input type="submit" value="Submit" onclick="fun1()">
+            </pre>
+        </form>
+        <h2 id="demo"></id>
+    </body>
+</html>

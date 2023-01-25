@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Smart Analysis </title>
+
+    <style>
+        body{
+        padding-left: 18%;
+        padding-right: 18%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        font-family:'Courier New', Courier, monospace;
+        }
+
+        .container{
+        padding-left: 3%;
+        padding-right: 3%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-radius: 10px; 
+        animation: myfirst 3s infinite;
+        background-color: lightblue;
+        }
+
+        input[type=text], input[type=number], select, .t1 {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        box-sizing: border-box;
+        }
+
+        input[type=submit] {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+        background-color:coral;
+        }
+
+        @media screen and (max-width: 450px) {
+        body {
+        width: 100%;
+        font-family: fantasy;
+        }
+        }
+    </style>
+
+<script>
+    function myfunc1(){
+        maths = eval(document.getElementById("math").value);
+        english = eval(document.getElementById("english").value);
+        computer = eval(document.getElementById("computer").value);
+        tm = maths + english + computer;
+        pct = tm/3;
+        //alert("Your marks"+tm);
+        f1.tm.value = tm;
+        f1.pct.value = pct;
+        max_marks = maxmarks();
+        //console.log("clicked");
+        }   
+    
+        function maxmarks(){
+            max_marks = Math.max(english, maths, computer);
+            f1.max_marks.value = max_marks;
+        }
+</script> 
+</head>
+
+<body style="background-color: aliceblue;">
+    <div class="container">
+        <h1 style="text-shadow: 2px 3px 5px red;"> <center> Smart Analysis </center></h1>
+        <form name="f1">
+            Name: <input type="text" id="e_name"><br><br>
+            Mathematics: <input type="number" id="math"><br><br>
+            English: <input type="number" id="english"><br><br>
+            Computer Science: <input type="number" id="computer"><br><br>
+            <center><input type="button" value="Calculate" onclick="myfunc1()"></center>
+            <br><br><br><br>
+            <b> Total Marks: </b> <input type="number" id="tm"><br><br>
+            <b> Percentage: </b> <input type="number" id="pct"><br><br>
+            <b> Max Marks: </b> <input type="number" id="max_marks"><br><br>
+        </form>
+    </div>
+    <br><br>
+</body>
+</html>
