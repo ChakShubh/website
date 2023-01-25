@@ -3,17 +3,84 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <style>
+           #picture{
+                padding-left: 2%;
+                padding-right: 5%;
+            }
+
+            body{
+              background-color: cornflowerblue;
+              font-size: larger;
+            }
+    </style>
+
+    <script>
+      function fun1(){
+          website = document.getElementById("websites").value;
+          //alert(website);
+          if(website == "Coursera"){
+              window.open ("https://in.coursera.org/");
+          }
+          else if(website == "Udemy"){
+              window.open ("https://www.udemy.com/");
+          }
+          else if(website == "EdX"){
+              window.open ("https://www.edx.org/");
+          }
+          else if(website == "Udacity"){
+              window.open ("https://www.udacity.com/l");
+          }
+          else if(website == "LinkedIn"){
+              window.open ("https://www.linkedin.com/learning?trk=homepage-learning_nav-header-logo");
+          }
+          else{
+              alert("Website could not be loaded");
+          }
+      }
+  </script>
 </head>
+
 <body>
-    
-    <label for="courses">Courses: </label>
+  <br>
+  <div class="row row-cols-3 row-cols-md-1 g-4">
+    <!-- Additional Learning Resources -->
+    <div class="col">
+      <div class="card">
+        <class="card-img-top">
+        <div class="card-body">
+          <h4 class="card-title"><p><center><b> List of Learning Resources </b></h4><br></p></center>
+          <center>
+            <p class="card-text">    
+              <select name="websites" id="websites" onchange="fun1()">
+                <option name=""> Choose one Website </option><br>
+                <option value="Coursera" name="course"> Coursera </option><br>
+                <option value="Udemy" name="course"> Udemy </option><br>
+                <option value="EdX" name="course"> EdX </option><br>
+                <option value="Udacity" name="course"> Udacity </option><br>
+                <option value="LinkedIn" name="course"> LinkedIn Learning </option>
+              </select>
+            </p>
+          </center>
+        </div>
+      </div>
+    </div>
 
-    <select name="courses" id="courses">
-      <option value="PHP"> PHP </option>
-      <option value="Python"> PYTHON</option>
-      <option value="Artificial Intelligence"> ARTIFICIAL INTELLIGENCE </option>
-      <option value="Machine Learning"> MACHINE LEARNING </option>
-    </select>
-
+    <!-- Calculate Marks -->
+    <div class="col">
+      <div class="card">
+        <class="card-img-top">
+        <div class="card-body">
+          <h4 class="card-title"><p><center> <b> Smart Analysis of your Performance </b></h4><br></p></center>
+          <center>
+            <p class="card-text"><a href="./calculate_marks.html">Click Here</a>
+            </p>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
